@@ -9,7 +9,7 @@ export default function ProductsList(){
     React.useEffect(() => {
         (async () => {
         try{
-          let info = await axios(" http://localhost:3002/products", {mode:'cors'})
+          let info = await axios("http://localhost:3002/products", {mode:'cors'})
           setProducts(info.data)
         }catch(err){
           console.log(err.message)
