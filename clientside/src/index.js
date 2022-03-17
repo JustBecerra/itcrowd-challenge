@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore, applyMiddleware } from 'redux';
+import {BrowserRouter} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import {reducer} from './reducer/reducer.js';
+import thunk from 'redux-thunk'
+import {composeWithDevTools} from "redux-devtools-extension"
+
+// axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

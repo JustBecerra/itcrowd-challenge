@@ -1,15 +1,12 @@
 import './App.css';
 import ProductsList from './components/ProductsList/ProductsList.jsx'
-import AddProd from './components/AddProd/AddProd.jsx'
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
     <div>
-      <header>
-        List of products:
-      </header>
+      <NavBar/>
       <ProductsList/>
-      <AddProd />
     </div>
   );
 }

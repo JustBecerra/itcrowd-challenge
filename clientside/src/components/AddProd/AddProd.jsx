@@ -2,6 +2,9 @@ import React from "react"
 import Modal from 'react-modal';
 import './AddProd.css'
 import axios from "axios";
+import {useDispatch} from 'react-redux'
+import { addProduct } from "../../actions/addProduct";
+import { getProducts } from "../../actions/getProducts";
 
 export default function AddProd(){
     const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -11,6 +14,8 @@ export default function AddProd(){
       price:0,
       description:''
     })
+    
+    const dispatch = useDispatch()
 
     function openModal() {
       setIsOpen(true);
@@ -23,7 +28,8 @@ export default function AddProd(){
     async function handleSubmit(e){
       e.preventDefault()
       try{
-        await axios.post("http://localhost:3002/products", prodInfo)
+        await addProduct(prodInfo)
+        dispatch(await getProducts())
         setprodInfo({
           image_url:'',
           name:'',
@@ -45,7 +51,7 @@ export default function AddProd(){
 
     return(
         <div>
-          <button onClick={openModal}>Add product</button>
+          <button className="AddButton" onClick={openModal}>Add product</button>
           <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}

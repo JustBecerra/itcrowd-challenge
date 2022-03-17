@@ -1,0 +1,15 @@
+.background{
+    /* background-color: #72c400; */
+    background-color: #C46210;
+    width:100%;
+    height:70px;
+    border-bottom: 2px solid gray;
+}
+
+.header{
+    color:whitesmoke;
+    font-size: xx-large;
+    width:60%;
+    position:relative;
+    left:40%;
+}

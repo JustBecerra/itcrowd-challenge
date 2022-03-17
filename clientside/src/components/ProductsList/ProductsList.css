@@ -1,10 +1,22 @@
 .plST{
-    background-color: rgb(16, 13, 39);
-    border: 2px solid black;
-    width:50%;
-    position:relative;
-    left:24%;
+    /* background-color: rgb(16, 13, 39); */
+    border-bottom: 2px solid black;
+    width:99.9%;
+    height:600px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    /* justify-content: center; */
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+}
+
+.pagebuttons{
+  font-size: small;
+  width:fit-content;
+  height:fit-content;
+  position:relative;
+  top:42%;
+  left:14%;
+  margin-left: 30px;
+  border: 2px solid #C46210;
+  cursor:pointer;
 }
