@@ -1,0 +1,10 @@
+.plST{
+    background-color: rgb(16, 13, 39);
+    border: 2px solid black;
+    width:50%;
+    position:relative;
+    left:24%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
