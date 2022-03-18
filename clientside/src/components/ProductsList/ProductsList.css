@@ -13,10 +13,15 @@
   font-size: small;
   width:fit-content;
   height:fit-content;
-  position:relative;
-  top:42%;
-  left:14%;
   margin-left: 30px;
   border: 2px solid #C46210;
   cursor:pointer;
+}
+
+.buttoncontainer{
+  display:flex;
+  flex-direction: row;
+  position:absolute;
+  left:39%;
+  bottom:0%;
 }

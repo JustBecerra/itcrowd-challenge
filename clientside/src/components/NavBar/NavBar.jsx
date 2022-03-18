@@ -1,4 +1,5 @@
 import AddProd from "../AddProd/AddProd.jsx"
+import DeleteProd from "../DeleteProd/DeleteProd.jsx"
 import "./NavBar.css"
 
 export default function NavBar(){
@@ -8,6 +9,7 @@ export default function NavBar(){
             List of products:
           </header>
           <AddProd />
+          <DeleteProd />
         </div>
     )
 }

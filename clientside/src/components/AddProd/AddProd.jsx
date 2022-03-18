@@ -1,7 +1,6 @@
 import React from "react"
 import Modal from 'react-modal';
 import './AddProd.css'
-import axios from "axios";
 import {useDispatch} from 'react-redux'
 import { addProduct } from "../../actions/addProduct";
 import { getProducts } from "../../actions/getProducts";

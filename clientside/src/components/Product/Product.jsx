@@ -16,11 +16,13 @@ export default function Product({name, image, price, description}){
     return(
       <div className="prodST" >
         <div className='clickDiv' onClick={openModal}>
-          <img src={image} crossOrigin="true"/><br/>
-          <h2>
-            {name}<br/>
+          <img src={image} className="imageInfo" crossOrigin="true"/><br/>
+          <h4 className="nameinfo">
+            {name}
+          </h4>
+          <h4 className="priceinfo">
             ${price}
-          </h2>
+          </h4>
         </div>
         
         
@@ -31,12 +33,14 @@ export default function Product({name, image, price, description}){
           className='modalBG'
         >
           <button onClick={closeModal} className='closeButton'>X</button>
-          <img src={image} crossOrigin="true"/><br/>
-          <h2>
-            {name}<br/>
+          <img src={image} className="imageInfo" crossOrigin="true"/><br/>
+          <h4 className="nameinfo">
+            {name}
+          </h4>
+          <h4 className="priceinfo">
             ${price}
-          </h2>
-          <p>
+          </h4>
+          <p className="descriptionInfo">
             {description}
           </p>
          
