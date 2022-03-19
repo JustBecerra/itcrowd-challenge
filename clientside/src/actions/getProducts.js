@@ -1,5 +1,5 @@
 import axios from "axios";
-const urlapi = "http://localhost:3002/products";
+const urlapi = "/products";
 
 export async function getProducts(){
     let info = await axios(urlapi)
