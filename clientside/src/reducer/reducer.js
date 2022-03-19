@@ -3,7 +3,7 @@ const initialState = {
 
 }
     
-    export const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
       switch (action.type) {
           case 'GET_PRODUCTS':
             return {
@@ -13,4 +13,4 @@ const initialState = {
           default:
               return state;
         }
-    }
+}

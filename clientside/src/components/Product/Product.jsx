@@ -1,8 +1,9 @@
 import React from "react"
 import "./Product.css"
 import Modal from 'react-modal';
+import DeleteProd from "../DeleteProd/DeleteProd";
 
-export default function Product({name, image, price, description}){
+export default function Product({id, name, image, price, description}){
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     function openModal() {
@@ -15,7 +16,9 @@ export default function Product({name, image, price, description}){
 
     return(
       <div className="prodST" >
+        <DeleteProd id={id} />
         <div className='clickDiv' onClick={openModal}>
+          
           <img src={image} className="imageInfo" crossOrigin="true"/><br/>
           <h4 className="nameinfo">
             {name}
@@ -33,11 +36,11 @@ export default function Product({name, image, price, description}){
           className='modalBG'
         >
           <button onClick={closeModal} className='closeButton'>X</button>
-          <img src={image} className="imageInfo" crossOrigin="true"/><br/>
-          <h4 className="nameinfo">
+          <img src={image} className="imageModal" crossOrigin="true"/><br/>
+          <h4 className="nameModal">
             {name}
           </h4>
-          <h4 className="priceinfo">
+          <h4 className="priceModal">
             ${price}
           </h4>
           <p className="descriptionInfo">

@@ -47,17 +47,15 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     const {id} = req.params
+    console.log(typeof id + id)
     try{
-        // const deleteProd = await Product.destroy({
-        //   where: {id: {[Op.eq]: id}},
-        // })
-        const deleteProd = await Product.destroy({
-          where: {id: [id]},
-        })
+      const deleteProd = await Product.destroy({
+        where: {id: [id]},
+      })
         
-        return res.json(deleteProd)
+      return res.json(deleteProd)
     }catch(err){
-        return res.send(err.message)
+      return res.send(err.message)
     }
 })
 
