@@ -7,14 +7,15 @@ import { createStore, applyMiddleware } from 'redux';
 import {BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import {reducer} from './reducer/reducer.js';
-import thunkMiddleware from 'redux-thunk'
+import thunk from 'redux-thunk'
 import {composeWithDevTools} from "redux-devtools-extension"
-// import { dispatchProducts } from './reducer/reducer.js';
+import dotenv from 'dotenv'
+import axios from 'axios';
+dotenv.config()
 
-// axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
-// const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware);
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunkMiddleware)));
-// store.dispatch(dispatchProducts)
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3002";
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
+
 
 ReactDOM.render(
   <Provider store={store}>
