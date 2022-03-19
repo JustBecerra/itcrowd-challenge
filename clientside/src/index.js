@@ -10,8 +10,9 @@ import {reducer} from './reducer/reducer.js';
 import thunk from 'redux-thunk'
 import {composeWithDevTools} from "redux-devtools-extension"
 import axios from 'axios';
+// import dotenv from 'dotenv'
 
-
+// dotenv.config()
 axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3002";
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 
