@@ -3,6 +3,7 @@ const urlapi = "/products";
 
 export async function getProducts(){
     let info = await axios(urlapi)
+    console.log("action: ", info)
     return {type: "GET_PRODUCTS", payload:info.data}
 }
 
