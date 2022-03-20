@@ -7,11 +7,6 @@
     "dev": "node --inspect .",
     "start": "node index.js"
   },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
