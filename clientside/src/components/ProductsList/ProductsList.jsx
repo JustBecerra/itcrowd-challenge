@@ -27,7 +27,7 @@ export default function ProductsList(){
           dispatch(await getProducts())
           
         }catch(err){
-          console.log('CD-Wenz')
+          console.log(err.message)
         }
         })()
     },[])
