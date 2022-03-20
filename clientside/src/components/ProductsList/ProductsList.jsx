@@ -34,7 +34,7 @@ export default function ProductsList(){
 
     return(
         <div className="plST">
-          {products.map(p => <Product key={p.id} id={p.id} name={p.name} image={p.image_url} price={p.price} description={p.description}/>)}
+          {products && products.length > 0 ? products.map(p => <Product key={p.id} id={p.id} name={p.name} image={p.image_url} price={p.price} description={p.description}/>) : ''}
           <div className="buttoncontainer">
             <button className='pagebuttons' onClick={lastPage}>
               Last Page
